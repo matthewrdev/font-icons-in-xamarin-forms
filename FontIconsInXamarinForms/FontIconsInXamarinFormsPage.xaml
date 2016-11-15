@@ -12,16 +12,16 @@
 			<local:DoubleToColorConverter x:Key="doubleToColorConverter"/>
 		</ResourceDictionary>
 	</ContentPage.Resources>
-	<StackLayout Orientation="Vertical" Padding="20" Spacing="4" HorizontalOptions="Center">
+	<StackLayout Orientation="Vertical" Padding="20" Spacing="4" HorizontalOptions="CenterAndExpand">
 		<Label Text="Rock, Paper or Scizzors?"/>
 
-		<StackLayout Orientation="Horizontal">
+		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
 			<Label Text="Size:"/>
 			<Slider x:Name="sizeSlider" Value="{Binding SizeValue}"/>
 		</StackLayout>
 
-		<StackLayout Orientation="Horizontal">
-			<Label Text="Size:"/>
+		<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+			<Label Text="Color:"/>
 			<Slider x:Name="colorSlider" Value="{Binding ColorValue}"/>
 		</StackLayout>
 
