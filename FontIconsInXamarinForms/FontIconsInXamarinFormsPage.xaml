@@ -1,24 +1,49 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage 
-		xmlns ="http://xamarin.com/schemas/2014/forms" xmlns:styling="clr-namespace:FontIconsInXamarinForms.Styling;assembly=FontIconsInXamarinForms" 
+		xmlns ="http://xamarin.com/schemas/2014/forms" 
+		xmlns:local="clr-namespace:FontIconsInXamarinForms"
+		xmlns:styling="clr-namespace:FontIconsInXamarinForms.Styling;assembly=FontIconsInXamarinForms" 
 		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		BindingContext="{x:Static local:ViewModelLocator.ViewModel}"
 		x:Class="FontIconsInXamarinForms.FontIconsInXamarinFormsPage">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<local:DoubleToIntConverter x:Key="doubleToIntConverter"/>
+			<local:DoubleToColorConverter x:Key="doubleToColorConverter"/>
+		</ResourceDictionary>
+	</ContentPage.Resources>
 	<StackLayout Orientation="Vertical" Padding="20" Spacing="4" HorizontalOptions="Center">
 		<Label Text="Rock, Paper or Scizzors?"/>
+
+		<StackLayout Orientation="Horizontal">
+			<Label Text="Size:"/>
+			<Slider x:Name="sizeSlider" Value="{Binding SizeValue}"/>
+		</StackLayout>
+
+		<StackLayout Orientation="Horizontal">
+			<Label Text="Size:"/>
+			<Slider x:Name="colorSlider" Value="{Binding ColorValue}"/>
+		</StackLayout>
+
+		<Label Text="{Binding Selection}"/>
+		
 		<Button 
 			Text="{x:Static styling:FontAwesomeIcons.Rock}"
 			FontFamily="{x:Static styling:Fonts.FontAwesome}"
-			TextColor="Blue"
-			FontSize="Large"/>
+			TextColor="{Binding ColorValue, Converter={StaticResource doubleToColorConverter}}"
+			FontSize="{Binding SizeValue, Converter={StaticResource doubleToIntConverter}}"
+			Command="{Binding Rock}"/>
 		<Button 
 			Text="{x:Static styling:FontAwesomeIcons.Paper}"
 			FontFamily="{x:Static styling:Fonts.FontAwesome}"
-			TextColor="Green"
-			FontSize="Large"/>
+			TextColor="{Binding ColorValue, Converter={StaticResource doubleToColorConverter}}"
+			FontSize="{Binding SizeValue, Converter={StaticResource doubleToIntConverter}}"
+			Command="{Binding Paper}"/>
 		<Button 
 			Text="{x:Static styling:FontAwesomeIcons.Scizzors}"
 			FontFamily="{x:Static styling:Fonts.FontAwesome}"
-			TextColor="Red"
-			FontSize="Large"/>
+			TextColor="{Binding ColorValue, Converter={StaticResource doubleToColorConverter}}"
+			FontSize="{Binding SizeValue, Converter={StaticResource doubleToIntConverter}}"
+			Command="{Binding Scizzors}"/>
 	</StackLayout>
 </ContentPage>
