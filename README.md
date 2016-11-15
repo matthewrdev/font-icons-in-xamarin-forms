@@ -12,4 +12,5 @@ Why do you want to do this:
  - No more image density wrangling bs for Android.
   
 **Example**
-![Using fonts as icons demo](images/demo.dif)
+
+![Using fonts as icons demo](images/demo.gif)
