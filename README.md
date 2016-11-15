@@ -9,7 +9,7 @@ Why do you want to do this:
  - Fonts are rendered vectors!
   - Resize it by changing the font size!
   - Recolour it by changing the font color!
- - No more image density wrangling bs for Android.
+ - No more image density wrangling 💩 for Android.
   
 **Example**
 
