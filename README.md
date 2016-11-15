@@ -4,7 +4,7 @@ Stop the bitmap apocalypse!
 
 Use custom fonts (such as FontAwesome) to create resizable, recolorable icons throughout your app 🤘
 
-Why do you want to do this:
+You should do this because:
  - Less image resources == smaller appsize
  - Fonts are rendered vectors!
   - Resize it by changing the font size!
