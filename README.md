@@ -13,4 +13,4 @@ Why do you want to do this:
   
 **Example**
 
-![Using fonts as icons demo](images/demo.gif)
+![Using fonts as icons demo](images/font-demo.gif)
