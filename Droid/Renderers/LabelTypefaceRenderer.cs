@@ -52,5 +52,11 @@ namespace FontIconsInXamarinForms.Droid.Renderers
 
 			FontUtils.ApplyTypeface(Control, Element.FontFamily);
 		}
+
+        protected override void OnElementPropertyChanged (object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            base.OnElementPropertyChanged (sender, e);
+            FontUtils.ApplyTypeface (Control, Element.FontFamily);
+        }
 	}
 }
